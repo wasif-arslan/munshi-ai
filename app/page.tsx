@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Image from 'next/image'
 import logo from './assets/logo.png'
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 
 export default function Home() {
@@ -17,19 +17,8 @@ export default function Home() {
     setIsOpen(false);
   };
 
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      closeMenu();
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [handleClickOutside]); 
-  return (
+  
+   return (
 
     <div className="bg-[#100a11] overflow-x-hidden">
       <Head>
