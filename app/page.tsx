@@ -382,7 +382,7 @@ export default function Home() {
       </section>
 
       {/* Section 4 - Forecast */}
-      <section className="w-full h-full md:flex   gap-10  px-28 font-poppins text-white mt-20">
+      <section className="w-full h-full md:flex   gap-10  md:px-20 px-5 font-poppins text-white mt-20">
         <div className="w-full  flex flex-col justify-center">
           <h3 className="text-2xl md:text-[40px] lg:text-[60px] ml-5 leading-tight">
             Instant access to data to drive smarter financial decisions
