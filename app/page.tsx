@@ -28,7 +28,7 @@ export default function Home() {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, []);
+  }, [handleClickOutside]); 
   return (
 
     <div className="bg-[#100a11] overflow-x-hidden">
