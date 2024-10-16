@@ -358,16 +358,21 @@ export default function Home() {
           </a>
         </div>
         <div className="flex justify-center items-center">
-          {/* <Image
-            src={logo}
-            alt="YourMunshi Logo"
-            className="rounded-2xl drop-shadow-[35px_0px_100px_#6533ca7a]"
-          /> */}
-          <iframe
+            <video
+            className="h-[80vh] scale-110 laptop:scale-100"
+            playsInline
+            muted
+            autoPlay
+            loop
+          >
+            <source src="/assets/video.mp4" type="video/mp4" /> 
+
+          </video>
+          {/* <iframe
             src="https://www.youtube.com/watch?v=0VJFVO4NkAw"
             frameborder="0"
             allowfullscreen
-          />
+          /> */}
         </div>
       </section>
 
