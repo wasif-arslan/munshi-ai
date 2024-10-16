@@ -358,16 +358,18 @@ export default function Home() {
           </a>
         </div>
         <div className="flex justify-center items-center">
-            <video
-            className="h-[80vh] scale-110 laptop:scale-100"
-            playsInline
-            muted
-            autoPlay
-            loop
-          >
-            <source src="/assets/video.mp4" type="video/mp4" /> 
-
-          </video>
+        <video
+      className="h-[80vh] scale-110 laptop:scale-100"
+      playsInline
+      muted
+      autoPlay
+      loop
+      controls={false} // Optionally hide controls
+    >
+      <source src="/assets/video.webm" type="video/webm" />
+      <source src="/assets/video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
           {/* <iframe
             src="https://www.youtube.com/watch?v=0VJFVO4NkAw"
             frameborder="0"
