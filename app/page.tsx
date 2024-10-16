@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Image from 'next/image'
 import logo from './assets/logo.png'
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useRef } from 'react';
 
 
 export default function Home() {
@@ -258,7 +258,7 @@ export default function Home() {
         <div className="w-full flex gap-10 flex-wrap">
           <article className="bg-[#2e1938] text-white p-8 rounded-md mt-5">
             <h3 className="text-[25px]">YourMunshi Announces $16M Series A Round</h3>
-            <p>Today is a big day for YourMunshi. We've raised $16M in Series A funding led by Align Ventures with other investors.</p>
+            <p>Today is a big day for YourMunshi. We &apos ve raised $16M in Series A funding led by Align Ventures with other investors.</p>
           </article>
           {/* Other articles */}
         </div>
