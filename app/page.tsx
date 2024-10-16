@@ -2,6 +2,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import logo from "./assets/logo.png";
+import chatbot from "./assets/chatbot.png";
 import React, { useState, useRef } from "react";
 
 export default function Home() {
@@ -27,176 +28,148 @@ export default function Home() {
       </Head>
 
       {/* Header */}
-      <header className="w-full h-20 sticky backdrop-blur-md bg-[#0f0a106a] laptop:h-16 top-0 text-white flex items-center z-10">
-        <nav className="bg-[#100a11] font-poppins flex text-center  items-center p-4 relative">
+      <header className="w-full h-20 sticky backdrop-blur-md bg-[#0f0a106a] laptop:h-16 top-0 text-white flex  z-10">
+        <nav className="bg-[#100a11] font-poppins flex justify-between items-center p-4 relative">
           {/* Logo aligned on the left */}
-          <div className="flex justify-between">
-            <div className="flex items-center">
-              <Image
-                src={logo}
-                alt="YourMunshi Logo"
-                className="md:ml-5 md:p-10 md:mt-4 md:pt-5 p-10"
-              />
-            </div>
-            {/* Desktop Menu aligned on the right */}
-            <div className="hidden md:flex items-center md:justify-items-end">
-              <ul className="flex gap-10 text-lg items-center ">
-                <li className="hover:text-[#dbccf6]">
-                  <a href="/">Why YourMunshi</a>
-                </li>
 
-                {/* Core Platform Dropdown */}
-                <li className="group relative hover:text-[#dbccf6]">
-                  <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
-                    <span>Core Platform</span>
-                    <svg
-                      viewBox="0 0 12 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="12"
-                      className="ml-[2px]"
-                    >
-                      <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
-                    </svg>
-                  </button>
-                  <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
-                    <div className="overflow-hidden rounded-md border border-[#9651b88f]">
-                      <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6">
-                        <li>
-                          <a
-                            className="text-white hover:text-[#b862e3]"
-                            href="#"
-                          >
-                            Contract Intelligence
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="text-white hover:text-[#b862e3]"
-                            href="#"
-                          >
-                            Contract Analytics
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="text-white hover:text-[#b862e3]"
-                            href="#"
-                          >
-                            Supplier Relationship Management
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="text-white hover:text-[#b862e3]"
-                            href="#"
-                          >
-                            Intelligent Enterprise Search
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="text-white hover:text-[#b862e3]"
-                            href="#"
-                          >
-                            Workflows
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+          <div className="flex items-center">
+            <Image
+              src={logo}
+              alt="YourMunshi Logo"
+              className="md:ml-5 md:p-10 md:mt-4 md:pt-5 p-10"
+            />
+          </div>
+          {/* Desktop Menu aligned on the right */}
+          <div className="hidden md:flex items-center md:justify-items-end">
+            <ul className="flex gap-10 text-lg items-center ">
+              <li className="hover:text-[#dbccf6]">
+                <a href="/">Why YourMunshi</a>
+              </li>
+
+              {/* Core Platform Dropdown */}
+              <li className="group relative hover:text-[#dbccf6]">
+                <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
+                  <span>Core Platform</span>
+                  <svg
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    className="ml-[2px]"
+                  >
+                    <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
+                  </svg>
+                </button>
+                <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
+                  <div className="overflow-hidden rounded-md border border-[#9651b88f]">
+                    <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6">
+                      <li>
+                        <a className="text-white hover:text-[#b862e3]" href="#">
+                          Contract Intelligence
+                        </a>
+                      </li>
+                      <li>
+                        <a className="text-white hover:text-[#b862e3]" href="#">
+                          Contract Analytics
+                        </a>
+                      </li>
+                      <li>
+                        <a className="text-white hover:text-[#b862e3]" href="#">
+                          Supplier Relationship Management
+                        </a>
+                      </li>
+                      <li>
+                        <a className="text-white hover:text-[#b862e3]" href="#">
+                          Intelligent Enterprise Search
+                        </a>
+                      </li>
+                      <li>
+                        <a className="text-white hover:text-[#b862e3]" href="#">
+                          Workflows
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                {/* Company Dropdown */}
-                <li className="group relative hover:text-[#dbccf6]">
-                  <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
-                    <span>Company</span>
-                    <svg
-                      viewBox="0 0 12 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="12"
-                      className="ml-[2px]"
-                    >
-                      <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
-                    </svg>
-                  </button>
-                  <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
-                    <div className="overflow-hidden rounded-md border border-[#9651b88f]">
-                      <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6 text-xl">
-                        <li>
-                          <a
-                            className="text-white hover:text-[#b862e3]"
-                            href="#"
-                          >
-                            About us
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="text-white hover:text-[#b862e3]"
-                            href="#"
-                          >
-                            Careers
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+              {/* Company Dropdown */}
+              <li className="group relative hover:text-[#dbccf6]">
+                <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
+                  <span>Company</span>
+                  <svg
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    className="ml-[2px]"
+                  >
+                    <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
+                  </svg>
+                </button>
+                <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
+                  <div className="overflow-hidden rounded-md border border-[#9651b88f]">
+                    <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6 text-xl">
+                      <li>
+                        <a className="text-white hover:text-[#b862e3]" href="#">
+                          About us
+                        </a>
+                      </li>
+                      <li>
+                        <a className="text-white hover:text-[#b862e3]" href="#">
+                          Careers
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                </li>
+                </div>
+              </li>
 
-                {/* Resources Dropdown */}
-                <li className="group relative hover:text-[#dbccf6]">
-                  <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
-                    <span>Resources</span>
-                    <svg
-                      viewBox="0 0 12 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="12"
-                      height="12"
-                      className="ml-[2px]"
-                    >
-                      <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
-                    </svg>
-                  </button>
-                  <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
-                    <div className="overflow-hidden rounded-md border border-[#9651b88f]">
-                      <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6 text-xl">
-                        <li>
-                          <a
-                            className="text-white hover:text-[#b862e3]"
-                            href="#"
-                          >
-                            Blog
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            className="text-white hover:text-[#b862e3]"
-                            href="#"
-                          >
-                            Content Library
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
+              {/* Resources Dropdown */}
+              <li className="group relative hover:text-[#dbccf6]">
+                <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
+                  <span>Resources</span>
+                  <svg
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="12"
+                    height="12"
+                    className="ml-[2px]"
+                  >
+                    <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
+                  </svg>
+                </button>
+                <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
+                  <div className="overflow-hidden rounded-md border border-[#9651b88f]">
+                    <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6 text-xl">
+                      <li>
+                        <a className="text-white hover:text-[#b862e3]" href="#">
+                          Blog
+                        </a>
+                      </li>
+                      <li>
+                        <a className="text-white hover:text-[#b862e3]" href="#">
+                          Content Library
+                        </a>
+                      </li>
+                    </ul>
                   </div>
-                </li>
-              </ul>
+                </div>
+              </li>
+            </ul>
 
-              {/* Contact Sales and Book a Demo */}
-              <ul className="flex gap-10 font-semibold items-center">
-                <li className="hover:text-[#dbccf6] text-lg ml-5">
-                  <a href="">Contact Sales</a>
-                </li>
-                <li className="bg-white text-black px-6 h-[35px] flex items-center justify-center rounded-full hover:bg-[#dbccf6]">
-                  <a href="#">Book a Demo</a>
-                </li>
-              </ul>
-            </div>
+            {/* Contact Sales and Book a Demo */}
+            <ul className="flex gap-10 font-semibold items-center">
+              <li className="hover:text-[#dbccf6] text-lg ml-5">
+                <a href="">Contact Sales</a>
+              </li>
+              <li className="bg-white text-black px-6 h-[35px] flex items-center justify-center rounded-full hover:bg-[#dbccf6]">
+                <a href="#">Book a Demo</a>
+              </li>
+            </ul>
           </div>
 
           {/* Mobile Menu */}
@@ -270,13 +243,13 @@ export default function Home() {
       {/* Hero Section */}
       <section
         id="main"
-        className="flex px-4 relative md:ml-20 laptop:flex-col"
+        className="flex flex-col md:flex-row px-4 relative md:ml-20 gap-5 laptop:flex-col mt-5"
       >
-        <div className="flex   justify-center items-center scale-95 flex-col w-full">
-          <h1 className="text-[70px] mx-mobile:text-[80px] drop-shadow-[0px_0px_60px_#6533ca]">
+        <div className="flex justify-center items-center flex-col w-fit text-center md:text-left">
+          <h1 className="text-[40px] md:text-[50px] lg:text-[60px] xl:text-[70px] mx-mobile:text-[80px] drop-shadow-[0px_0px_60px_#6533ca]">
             <span className="text-[#c06bf1] ">Introducing YourMunshi</span>
           </h1>
-          <h1 className="text-[40px] mx-mobile:text-[80px] drop-shadow-[0px_0px_60px_#6533ca]">
+          <h1 className="text-[30px] md:text-[30px] lg:text-[40px]  drop-shadow-[0px_0px_60px_#6533ca]">
             <span className="text-[#fdfcfd]">
               Pakistan’s First AI Legal Assistant
             </span>
@@ -284,21 +257,17 @@ export default function Home() {
 
           <a
             href="#next"
-            className="bg-[#9966ff] hover:shadow-[0px_0px_95px_#bb99ff74] text-white px-10 py-3 text-2xl rounded-[40px] mt-7"
+            className="bg-[#9966ff] hover:shadow-[0px_0px_95px_#bb99ff74] text-white px-6 py-2 md:px-10 md:py-3 text-lg md:text-2xl rounded-[40px] mt-7"
           >
             Book a Demo
           </a>
         </div>
-        <div className="w-full flex justify-center items-center">
-          <video
-            className="h-[80vh] scale-110 laptop:scale-100"
-            playsInline
-            muted
-            autoPlay
-            loop
-          >
-            <source src="/assets/hero-video.webm" type="video/webm" />
-          </video>
+        <div className="w-full flex justify-center items-center mr-5 mt-5">
+          <Image
+            src={chatbot}
+            alt="YourMunshi Logo"
+            className="h-[30vh] md:h-full lg:h-[50vh] xl:h-[80vh] scale-70"
+          />
         </div>
       </section>
 
@@ -389,10 +358,15 @@ export default function Home() {
           </a>
         </div>
         <div className="flex justify-center items-center">
-          <Image
+          {/* <Image
             src={logo}
             alt="YourMunshi Logo"
             className="rounded-2xl drop-shadow-[35px_0px_100px_#6533ca7a]"
+          /> */}
+          <iframe
+            src="https://www.youtube.com/watch?v=0VJFVO4NkAw"
+            frameborder="0"
+            allowfullscreen
           />
         </div>
       </section>
