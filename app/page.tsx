@@ -3,8 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import logo from "./assets/logo.png";
 import chatbot from "./assets/chatbot.png";
-// import video from "./assets/";
-
 
 import React, { useState, useRef } from "react";
 
@@ -360,12 +358,10 @@ export default function Home() {
           </a>
         </div>
         <div className="flex justify-center items-center">
-          <video width="620" height="440" controls preload="none" autoPlay >
-            <source src={video} type="video/mp4" />
-           
+          <video width="620" height="440" controls preload="none" autoPlay>
+            <source src={"./assets/video.mp4"} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          
         </div>
       </section>
 
