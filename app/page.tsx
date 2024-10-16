@@ -3,6 +3,9 @@ import Head from "next/head";
 import Image from "next/image";
 import logo from "./assets/logo.png";
 import chatbot from "./assets/chatbot.png";
+// import video from "./assets/";
+
+
 import React, { useState, useRef } from "react";
 
 export default function Home() {
@@ -29,19 +32,18 @@ export default function Home() {
 
       {/* Header */}
       <header className="w-full h-20 sticky backdrop-blur-md bg-[#0f0a106a] laptop:h-16 top-0 text-white flex  z-10">
-        <nav className="bg-[#100a11] font-poppins flex justify-between items-center p-4 relative">
+        <nav className="bg-[#100a11] font-poppins flex lg:gap-20 md:gap-2 items-center p-4 relative">
           {/* Logo aligned on the left */}
 
-          <div className="flex items-center">
-            <Image
-              src={logo}
-              alt="YourMunshi Logo"
-              className="md:ml-5 md:p-10 md:mt-4 md:pt-5 p-10"
-            />
-          </div>
+          <Image
+            src={logo}
+            alt="YourMunshi Logo"
+            className="md:ml-5 md:p-10 md:mt-4 md:pt-5 p-10"
+          />
+
           {/* Desktop Menu aligned on the right */}
-          <div className="hidden md:flex items-center md:justify-items-end">
-            <ul className="flex gap-10 text-lg items-center ">
+          <div className="hidden md:flex items-center md:justify-between ">
+            <ul className="flex md:gap-5 lg:gap-10 text-lg items-center ">
               <li className="hover:text-[#dbccf6]">
                 <a href="/">Why YourMunshi</a>
               </li>
@@ -281,7 +283,7 @@ export default function Home() {
             <span className="text-[#c06bf1]">3x</span>
           </h1>
           <h4 className="text-[25px]  mx-mobile:text-[20px] ">Faster Cycles</h4>
-          <p className="w-[200px]">
+          <p className="w-[250px]">
             Stop wasting time with manual contract review and analysis. Access
             critical data across all contracts in seconds.
           </p>
@@ -348,7 +350,7 @@ export default function Home() {
           <h3 className="md:text-[60px] text-2xl ml-5 xl-laptop:text-[30px] xl-laptop:leading-[45px] md:leading-[67px]">
             Instant access to data to drive smarter financial decisions
           </h3>
-          <p className="mt-4 max-w-[500px] text-md ml-5 text-18 font-light">
+          <p className="mt-4 text-md ml-5 text-18 font-light">
             Find the financial insights you need to make smarter decisions.
             Understand what products and services you’re paying for to optimize
             your spend and reduce duplication.
@@ -358,23 +360,12 @@ export default function Home() {
           </a>
         </div>
         <div className="flex justify-center items-center">
-        <video
-      className="h-[80vh] scale-110 laptop:scale-100"
-      playsInline
-      muted
-      autoPlay
-      loop
-      controls={false} // Optionally hide controls
-    >
-      <source src="/assets/video.webm" type="video/webm" />
-      <source src="/assets/video.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-          {/* <iframe
-            src="https://www.youtube.com/watch?v=0VJFVO4NkAw"
-            frameborder="0"
-            allowfullscreen
-          /> */}
+          <video width="620" height="440" controls preload="none" autoPlay >
+            <source src={video} type="video/mp4" />
+           
+            Your browser does not support the video tag.
+          </video>
+          
         </div>
       </section>
 
@@ -384,7 +375,7 @@ export default function Home() {
           <h3 className="md:text-[60px] text-2xl ml-5 xl-laptop:text-[30px] xl-laptop:leading-[45px] md:leading-[67px]">
             Instant access to data to drive smarter financial decisions
           </h3>
-          <p className="mt-4 max-w-[500px] text-md ml-5 text-18 font-light">
+          <p className="mt-4  text-md ml-5 text-18 font-light">
             Find the financial insights you need to make smarter decisions.
             Understand what products and services you’re paying for to optimize
             your spend and reduce duplication.
