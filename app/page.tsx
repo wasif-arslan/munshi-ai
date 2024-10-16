@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import logo from "./assets/logo.png";
 import chatbot from "./assets/chatbot.png";
+import image1 from "./assets/image1.png";
 
 import React, { useState, useRef } from "react";
 
@@ -271,10 +272,14 @@ export default function Home() {
         </div>
       </section>
 
+      <span className="group flex h-[10px] gap-[8px] mx-auto w-fit mt-20">
+        <span className="bg-[#9966ff] w-[40px] rounded-xl"></span>
+        <span className="bg-[#9966ff] w-[10px] rounded-full"></span>
+      </span>
       {/* Section 1 - 3x Faster Cycles */}
       <section
         id="next"
-        className=" h-full   flex flex-wrap  py-[100px] laptop:py-[10px] justify-between gap-2"
+        className=" h-full  mt-20 mb-20 flex flex-wrap  py-[100px] laptop:py-[10px] justify-between gap-2"
       >
         <div className="text-white  md:px-20 xl-laptop:px-4 ml-3">
           <h1 className="text-[100px] mx-mobile:text-[80px] drop-shadow-[0px_0px_60px_#6533ca]">
@@ -327,7 +332,7 @@ export default function Home() {
             autoPlay
             loop
           >
-            <source src="/assets/dashboardd-video.webm" type="video/webm" />
+            <source src="./assets/video.mp4" type="video/mp4" />
           </video>
         </div>
         <p className="font-poppins text-[25px] text-center mx-mobile:text-[14px]">
@@ -342,60 +347,78 @@ export default function Home() {
         </a>
       </section>
 
+      <span className="group flex h-[10px] gap-[8px] mx-auto w-fit mt-20">
+        <span className="bg-[#9966ff] w-[40px] rounded-xl"></span>
+        <span className="bg-[#9966ff] w-[10px] rounded-full"></span>
+      </span>
       {/* Section 3 - Financial Insights */}
-      <section className="w-full h-full flex justify-center gap-10 items-center flex-wrap md:flex-col md:px-28 laptop:px-5 font-poppins text-white mt-20">
-        <div>
-          <h3 className="md:text-[60px] text-2xl ml-5 xl-laptop:text-[30px] xl-laptop:leading-[45px] md:leading-[67px]">
+      <section className="w-full h-full md:flex  gap-10 px-5 md:px-28 font-poppins text-white mt-20">
+        {/* Left: Image */}
+        <div className="w-full  flex justify-center items-center">
+          <Image
+            src={image1}
+            alt="YourMunshi Logo"
+            className="w-full  rounded-2xl drop-shadow-[35px_0px_100px_#6533ca7a]"
+          />
+        </div>
+
+        {/* Right: Text */}
+        <div className="w-full  flex flex-col justify-center">
+          <h3 className="text-2xl md:text-[40px] lg:text-[60px] ml-5 leading-tight">
             Instant access to data to drive smarter financial decisions
           </h3>
-          <p className="mt-4 text-md ml-5 text-18 font-light">
+          <p className="mt-4 text-md ml-5 text-lg font-light">
             Find the financial insights you need to make smarter decisions.
             Understand what products and services you’re paying for to optimize
             your spend and reduce duplication.
           </p>
-          <a className="text-[#9966ff] mt-5 ml-5 font-semibold hover:text-[#ca6afb]">
+          <a
+            href="#"
+            className="text-[#9966ff] mt-5 ml-5 font-semibold hover:text-[#ca6afb]"
+          >
             Learn more
           </a>
-        </div>
-        <div className="flex justify-center items-center">
-          <video width="620" height="440" controls preload="none" autoPlay>
-            <source src={"./assets/video.mp4"} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
         </div>
       </section>
 
       {/* Section 4 - Forecast */}
-      <section className="w-full h-full flex flex-wrap justify-center gap-16 items-center md:flex-col md:px-28 laptop:px-5 font-poppins text-white mt-20">
-        <div>
-          <h3 className="md:text-[60px] text-2xl ml-5 xl-laptop:text-[30px] xl-laptop:leading-[45px] md:leading-[67px]">
+      <section className="w-full h-full md:flex   gap-10  px-28 font-poppins text-white mt-20">
+        <div className="w-full  flex flex-col justify-center">
+          <h3 className="text-2xl md:text-[40px] lg:text-[60px] ml-5 leading-tight">
             Instant access to data to drive smarter financial decisions
           </h3>
-          <p className="mt-4  text-md ml-5 text-18 font-light">
+          <p className="mt-4 text-md ml-5 text-lg font-light">
             Find the financial insights you need to make smarter decisions.
             Understand what products and services you’re paying for to optimize
             your spend and reduce duplication.
           </p>
-          <a className="text-[#9966ff] mt-5 ml-5 font-semibold hover:text-[#ca6afb]">
+          <a
+            href="#"
+            className="text-[#9966ff] mt-5 ml-5 font-semibold hover:text-[#ca6afb]"
+          >
             Learn more
           </a>
         </div>
-        <div className="flex justify-center items-center">
+
+        <div className="w-full  flex justify-center items-center">
           <Image
-            src={logo}
+            src={image1}
             alt="YourMunshi Logo"
-            className="rounded-2xl drop-shadow-[35px_0px_100px_#6533ca7a]"
+            className="w-full  rounded-2xl drop-shadow-[35px_0px_100px_#6533ca7a]"
           />
         </div>
       </section>
-
+      <span className="group flex h-[10px] gap-[8px] mx-auto w-fit mt-20">
+        <span className="bg-[#9966ff] w-[40px] rounded-xl"></span>
+        <span className="bg-[#9966ff] w-[10px] rounded-full"></span>
+      </span>
       {/* Integrations */}
       <section className="integrations md:px-32 font-poppins h-full w-full text-center flex justify-center items-center relative mt-20">
         <div className="text-center">
           <h2 className="md:text-[60px] text-2xl  text-white md:leading-[70px]">
             Enhance your applications with integrations
           </h2>
-          <p className="mt-6 text-[20px] ml-5 text-[#cdc8d0] max-w-lg">
+          <p className="mt-4 text-md ml-5 text-lg font-light">
             Integrate your existing enterprise applications out of the box.
             YourMunshi connects to ERP, P2P, SSO, and more.
           </p>
@@ -404,6 +427,7 @@ export default function Home() {
           {/* Add images and logos for integrations */}
         </div>
       </section>
+
 
       {/* Latest News */}
       <section className="flex flex-col justify-center items-center text-white font-poppins md:px-32 w-full h-full mt-20">
