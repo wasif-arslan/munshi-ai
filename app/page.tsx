@@ -28,146 +28,175 @@ export default function Home() {
 
       {/* Header */}
       <header className="w-full h-20 sticky backdrop-blur-md bg-[#0f0a106a] laptop:h-16 top-0 text-white flex items-center z-10">
-        <nav className="bg-[#100a11] font-poppins flex  items-center p-4 relative">
+        <nav className="bg-[#100a11] font-poppins flex text-center  items-center p-4 relative">
           {/* Logo aligned on the left */}
-          <div className="flex items-center">
-            <Image
-              src={logo}
-              alt="YourMunshi Logo"
-              className="md:ml-5 md:p-10 md:mt-4 md:pt-5 p-10"
-            />
-          </div>
-          {/* Desktop Menu aligned on the right */}
-          <div className="hidden md:flex items-center md:justify-items-end">
-            <ul className="flex gap-10 text-lg items-center ">
-              <li className="hover:text-[#dbccf6]">
-                <a href="/">Why YourMunshi</a>
-              </li>
+          <div className="flex justify-between">
+            <div className="flex items-center">
+              <Image
+                src={logo}
+                alt="YourMunshi Logo"
+                className="md:ml-5 md:p-10 md:mt-4 md:pt-5 p-10"
+              />
+            </div>
+            {/* Desktop Menu aligned on the right */}
+            <div className="hidden md:flex items-center md:justify-items-end">
+              <ul className="flex gap-10 text-lg items-center ">
+                <li className="hover:text-[#dbccf6]">
+                  <a href="/">Why YourMunshi</a>
+                </li>
 
-              {/* Core Platform Dropdown */}
-              <li className="group relative hover:text-[#dbccf6]">
-                <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
-                  <span>Core Platform</span>
-                  <svg
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    className="ml-[2px]"
-                  >
-                    <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
-                  </svg>
-                </button>
-                <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
-                  <div className="overflow-hidden rounded-md border border-[#9651b88f]">
-                    <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6">
-                      <li>
-                        <a className="text-white hover:text-[#b862e3]" href="#">
-                          Contract Intelligence
-                        </a>
-                      </li>
-                      <li>
-                        <a className="text-white hover:text-[#b862e3]" href="#">
-                          Contract Analytics
-                        </a>
-                      </li>
-                      <li>
-                        <a className="text-white hover:text-[#b862e3]" href="#">
-                          Supplier Relationship Management
-                        </a>
-                      </li>
-                      <li>
-                        <a className="text-white hover:text-[#b862e3]" href="#">
-                          Intelligent Enterprise Search
-                        </a>
-                      </li>
-                      <li>
-                        <a className="text-white hover:text-[#b862e3]" href="#">
-                          Workflows
-                        </a>
-                      </li>
-                    </ul>
+                {/* Core Platform Dropdown */}
+                <li className="group relative hover:text-[#dbccf6]">
+                  <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
+                    <span>Core Platform</span>
+                    <svg
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      className="ml-[2px]"
+                    >
+                      <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
+                    </svg>
+                  </button>
+                  <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
+                    <div className="overflow-hidden rounded-md border border-[#9651b88f]">
+                      <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6">
+                        <li>
+                          <a
+                            className="text-white hover:text-[#b862e3]"
+                            href="#"
+                          >
+                            Contract Intelligence
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            className="text-white hover:text-[#b862e3]"
+                            href="#"
+                          >
+                            Contract Analytics
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            className="text-white hover:text-[#b862e3]"
+                            href="#"
+                          >
+                            Supplier Relationship Management
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            className="text-white hover:text-[#b862e3]"
+                            href="#"
+                          >
+                            Intelligent Enterprise Search
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            className="text-white hover:text-[#b862e3]"
+                            href="#"
+                          >
+                            Workflows
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
+                </li>
 
-              {/* Company Dropdown */}
-              <li className="group relative hover:text-[#dbccf6]">
-                <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
-                  <span>Company</span>
-                  <svg
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    className="ml-[2px]"
-                  >
-                    <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
-                  </svg>
-                </button>
-                <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
-                  <div className="overflow-hidden rounded-md border border-[#9651b88f]">
-                    <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6 text-xl">
-                      <li>
-                        <a className="text-white hover:text-[#b862e3]" href="#">
-                          About us
-                        </a>
-                      </li>
-                      <li>
-                        <a className="text-white hover:text-[#b862e3]" href="#">
-                          Careers
-                        </a>
-                      </li>
-                    </ul>
+                {/* Company Dropdown */}
+                <li className="group relative hover:text-[#dbccf6]">
+                  <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
+                    <span>Company</span>
+                    <svg
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      className="ml-[2px]"
+                    >
+                      <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
+                    </svg>
+                  </button>
+                  <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
+                    <div className="overflow-hidden rounded-md border border-[#9651b88f]">
+                      <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6 text-xl">
+                        <li>
+                          <a
+                            className="text-white hover:text-[#b862e3]"
+                            href="#"
+                          >
+                            About us
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            className="text-white hover:text-[#b862e3]"
+                            href="#"
+                          >
+                            Careers
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
+                </li>
 
-              {/* Resources Dropdown */}
-              <li className="group relative hover:text-[#dbccf6]">
-                <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
-                  <span>Resources</span>
-                  <svg
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    className="ml-[2px]"
-                  >
-                    <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
-                  </svg>
-                </button>
-                <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
-                  <div className="overflow-hidden rounded-md border border-[#9651b88f]">
-                    <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6 text-xl">
-                      <li>
-                        <a className="text-white hover:text-[#b862e3]" href="#">
-                          Blog
-                        </a>
-                      </li>
-                      <li>
-                        <a className="text-white hover:text-[#b862e3]" href="#">
-                          Content Library
-                        </a>
-                      </li>
-                    </ul>
+                {/* Resources Dropdown */}
+                <li className="group relative hover:text-[#dbccf6]">
+                  <button className="inline-flex items-center whitespace-nowrap text-15 tracking-wider hover:cursor-pointer leading-none transition-colors duration-200">
+                    <span>Resources</span>
+                    <svg
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      className="ml-[2px]"
+                    >
+                      <path d="M2.5 6 6 9l3.5-3" stroke="currentColor" />
+                    </svg>
+                  </button>
+                  <div className="group-hover:opacity-100 z-10 invisible absolute bottom-0 translate-y-full pt-4 opacity-0 transition-[opacity,visibility] duration-200 group-hover:visible">
+                    <div className="overflow-hidden rounded-md border border-[#9651b88f]">
+                      <ul className="flex flex-col space-y-4 bg-[#241928] p-4 pr-6 text-xl">
+                        <li>
+                          <a
+                            className="text-white hover:text-[#b862e3]"
+                            href="#"
+                          >
+                            Blog
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            className="text-white hover:text-[#b862e3]"
+                            href="#"
+                          >
+                            Content Library
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
-            </ul>
+                </li>
+              </ul>
 
-            {/* Contact Sales and Book a Demo */}
-            <ul className="flex gap-10 font-semibold items-center">
-              <li className="hover:text-[#dbccf6] text-lg ml-5">
-                <a href="">Contact Sales</a>
-              </li>
-              <li className="bg-white text-black px-6 h-[35px] flex items-center justify-center rounded-full hover:bg-[#dbccf6]">
-                <a href="#">Book a Demo</a>
-              </li>
-            </ul>
+              {/* Contact Sales and Book a Demo */}
+              <ul className="flex gap-10 font-semibold items-center">
+                <li className="hover:text-[#dbccf6] text-lg ml-5">
+                  <a href="">Contact Sales</a>
+                </li>
+                <li className="bg-white text-black px-6 h-[35px] flex items-center justify-center rounded-full hover:bg-[#dbccf6]">
+                  <a href="#">Book a Demo</a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Mobile Menu */}
@@ -276,14 +305,14 @@ export default function Home() {
       {/* Section 1 - 3x Faster Cycles */}
       <section
         id="next"
-        className=" h-full  gap-5 flex flex-wrap laptop:gap-20 py-[100px] laptop:py-[10px]"
+        className=" h-full   flex flex-wrap  py-[100px] laptop:py-[10px] justify-between gap-2"
       >
         <div className="text-white  md:px-20 xl-laptop:px-4 ml-3">
           <h1 className="text-[100px] mx-mobile:text-[80px] drop-shadow-[0px_0px_60px_#6533ca]">
             <span className="text-[#c06bf1]">3x</span>
           </h1>
           <h4 className="text-[25px]  mx-mobile:text-[20px] ">Faster Cycles</h4>
-          <p className="w-[300px]">
+          <p className="w-[200px]">
             Stop wasting time with manual contract review and analysis. Access
             critical data across all contracts in seconds.
           </p>
@@ -293,7 +322,7 @@ export default function Home() {
             <span className="text-[#c06bf1]">10%+</span>
           </h1>
           <h4 className="text-[25px] mx-mobile:text-[20px]">Cost Savings</h4>
-          <p className="w-[300px]">
+          <p className="w-[250px]">
             Insights into both contract and spend data together enable smart,
             quick decisions for cost consolidation and rationalization.
           </p>
